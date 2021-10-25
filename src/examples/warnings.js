@@ -3,8 +3,9 @@
 import * as React from 'react'
 
 function App() {
-  const [name, setName] = React.useState()
+  const [name, setName] = React.useState('')
   const [animal, setAnimal] = React.useState('tiger')
+  console.log('Animal : ', animal);
   return (
     <div>
       <div>
@@ -20,7 +21,7 @@ function App() {
         </label>
       </div>
       <div>
-        <button onClick={() => setAnimal()}>Unset animal</button>
+        <button onClick={() => setAnimal('')}>Unset animal</button>
         <label>
           Changing from controlled to uncontrolled:{' '}
           <input value={animal} onChange={e => setAnimal(e.target.value)} />
